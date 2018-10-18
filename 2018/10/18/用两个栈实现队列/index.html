@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>React+dva+ant-design | 住在海边的人的博客</title>
+  <title>用两个栈实现队列 | 住在海边的人的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="React+ant design（pro）+dva入门学习资料总结 在学习react之前，没用过任何前端框架，只用原生js，html和css简单地写过几个界面，用ajax写过前后台的交互等等，实现的都是一些很基础的功能，都是入门级水平，只对前端传统的实现方式有个基础的了解。">
-<meta name="keywords" content="React">
+  <meta name="description" content="题目描述： 用两个栈来实现一个队列，完成队列的Push和Pop操作，队列中的元素为int类型 考察知识点： 队列：先进先出 栈：后进先出">
+<meta name="keywords" content="剑指offer">
 <meta property="og:type" content="article">
-<meta property="og:title" content="React+dva+ant-design">
-<meta property="og:url" content="http://yoursite.com/2018/10/13/React-dva-ant-design/index.html">
+<meta property="og:title" content="用两个栈实现队列">
+<meta property="og:url" content="http://yoursite.com/2018/10/18/用两个栈实现队列/index.html">
 <meta property="og:site_name" content="住在海边的人的博客">
-<meta property="og:description" content="React+ant design（pro）+dva入门学习资料总结 在学习react之前，没用过任何前端框架，只用原生js，html和css简单地写过几个界面，用ajax写过前后台的交互等等，实现的都是一些很基础的功能，都是入门级水平，只对前端传统的实现方式有个基础的了解。">
+<meta property="og:description" content="题目描述： 用两个栈来实现一个队列，完成队列的Push和Pop操作，队列中的元素为int类型 考察知识点： 队列：先进先出 栈：后进先出">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-13T13:10:04.141Z">
+<meta property="og:updated_time" content="2018-10-18T14:03:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="React+dva+ant-design">
-<meta name="twitter:description" content="React+ant design（pro）+dva入门学习资料总结 在学习react之前，没用过任何前端框架，只用原生js，html和css简单地写过几个界面，用ajax写过前后台的交互等等，实现的都是一些很基础的功能，都是入门级水平，只对前端传统的实现方式有个基础的了解。">
+<meta name="twitter:title" content="用两个栈实现队列">
+<meta name="twitter:description" content="题目描述： 用两个栈来实现一个队列，完成队列的Push和Pop操作，队列中的元素为int类型 考察知识点： 队列：先进先出 栈：后进先出">
   
     <link rel="alternative" href="/atom.xml" title="住在海边的人的博客" type="application/atom+xml">
   
@@ -153,77 +153,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="n-React-dva-ant-design" class="article article-type-n " itemscope itemprop="blogPost">
+            <article id="post-用两个栈实现队列" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      React+dva+ant-design
+      用两个栈实现队列
     </h1>
   
 
         
-        <a href="/2018/10/13/React-dva-ant-design/" class="archive-article-date">
-  	<time datetime="2018-10-13T13:06:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-13</time>
+        <a href="/2018/10/18/用两个栈实现队列/" class="archive-article-date">
+  	<time datetime="2018-10-18T13:43:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>React+ant design（pro）+dva入门学习资料总结</strong></p>
-<p>在学习react之前，没用过任何前端框架，只用原生js，html和css简单地写过几个界面，用ajax写过前后台的交互等等，实现的都是一些很基础的功能，都是入门级水平，只对前端传统的实现方式有个基础的了解。</p>
+        <p><strong>题目描述：</strong></p>
+<p>用两个栈来实现一个队列，完成队列的Push和Pop操作，队列中的元素为int类型</p>
+<p><strong>考察知识点：</strong></p>
+<p>队列：先进先出</p>
+<p>栈：后进先出</p>
 <a id="more"></a>
-<p>为什么学习react？</p>
-<p>身边的人都在用各种前端框架写，虽然我主要做后端，以后应该也不会去从事前端的工作，但是因为前端的东西都是可视化的做起来使人很有成就感，所以想跟着学习一下。</p>
-<p>学习目标？</p>
-<p>我对自己的定位是，以后如果做技术的话，基本就是做后端了，还是比较喜欢Java哈哈哈，但是呢，做后端的在必要的时候还是得会搭几个简单的界面吧，因此我想要达到的目标就是能够开箱即用，在需要的时候快速搭建页面，实现需要的功能，并不是特别追求界面的效果，还是以功能为主。</p>
-<p>学习路线？</p>
-<p>因为全靠自己摸索，难免走些弯路，但是我的学习路线代表了我探索的过程吧，如何从一棵树到一片森林，从一个点出发探索出完整的技术栈，这个过程还是挺有意思的，仅供参考。总体感觉react技术栈东西还真是不少，前前后后学了有一个月吧，刚开始的时候还是很懵逼的感觉不知道的东西好多，把基本知识点都过了一遍之后就容易多了，虽然并没有完全掌握但至少看文档的时候没那么痛苦了。</p>
-<p>下面整理一下我学习过程中用到的觉得还不错的学习资料：</p>
-<p>JavaScript基础语法：</p>
-<p><a href="https://blog.csdn.net/diyagea/article/details/50261289" target="_blank" rel="noopener">https://blog.csdn.net/diyagea/article/details/50261289</a></p>
-<p>react官网：</p>
-<p><a href="https://reactjs.org/" target="_blank" rel="noopener">https://reactjs.org/</a></p>
-<p>redux中文文档：</p>
-<p><a href="http://www.redux.org.cn/" target="_blank" rel="noopener">http://www.redux.org.cn/</a></p>
-<p>redux-saga-in-Chinese</p>
-<p><a href="https://github.com/superRaytin/redux-saga-in-chinese" target="_blank" rel="noopener">https://github.com/superRaytin/redux-saga-in-chinese</a></p>
-<p>ant-design文档：</p>
-<p><a href="https://ant.design/index-cn" target="_blank" rel="noopener">https://ant.design/index-cn</a></p>
-<p>ant-design-pro文档：</p>
-<p><a href="https://pro.ant.design/docs/getting-started" target="_blank" rel="noopener">https://pro.ant.design/docs/getting-started</a></p>
-<p>dva框架：</p>
-<p>官网教程（有很多实例，一步一步进阶）：</p>
-<p><a href="https://dvajs.com/guide/" target="_blank" rel="noopener">https://dvajs.com/guide/</a></p>
-<p>基础的count计数器应用教程（非常基础）：</p>
-<p><a href="https://github.com/sorrycc/blog/issues/8" target="_blank" rel="noopener">https://github.com/sorrycc/blog/issues/8</a></p>
-<p><a href="https://github.com/dvajs/dva-docs/blob/master/v1/zh-cn/getting-started.md" target="_blank" rel="noopener">https://github.com/dvajs/dva-docs/blob/master/v1/zh-cn/getting-started.md</a></p>
-<p>简单的用户管理项目教程（写的非常好，很适合小白，该文档中还有相关技术文档可供学习）：</p>
-<p><a href="https://github.com/dvajs/dva-docs/tree/master/v1/zh-cn/tutorial" target="_blank" rel="noopener">https://github.com/dvajs/dva-docs/tree/master/v1/zh-cn/tutorial</a></p>
-<p>使用Dva时需要使用到的ES6技术：</p>
-<p><a href="https://github.com/dvajs/dva-knowledgemap" target="_blank" rel="noopener">https://github.com/dvajs/dva-knowledgemap</a></p>
-<p><a href="http://www.ruanyifeng.com/blog/2015/04/generator.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2015/04/generator.html</a></p>
-<p><a href="http://www.ruanyifeng.com/blog/2015/05/async.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2015/05/async.html</a></p>
-<p>roadhog相关介绍：</p>
-<p><a href="https://github.com/sorrycc/roadhog" target="_blank" rel="noopener">https://github.com/sorrycc/roadhog</a></p>
-<p>请求处理：</p>
-<p><a href="https://www.jianshu.com/p/6482f4785929" target="_blank" rel="noopener">https://www.jianshu.com/p/6482f4785929</a></p>
-<p>umi相关：</p>
-<p>学习资料：</p>
-<p><a href="https://github.com/umijs/umi/blob/master/README_zh-CN.md" target="_blank" rel="noopener">https://github.com/umijs/umi/blob/master/README_zh-CN.md</a></p>
-<p>十分钟入门小视频：</p>
-<p><a href="https://www.youtube.com/watch?v=vkAUGUlYm24&amp;feature=youtu.be" target="_blank" rel="noopener">https://www.youtube.com/watch?v=vkAUGUlYm24&amp;feature=youtu.be</a></p>
-<p>umi官方指南：</p>
-<p><a href="https://umijs.org/" target="_blank" rel="noopener">https://umijs.org/</a></p>
-<p>dva官网中有很多个例子，一个一个进阶，后面还有一个ant-design-pro开箱即用的demo个人觉得非常好用，对应的ant design pro官网中提供了相关的组件和API，非常适合快速搭建。</p>
-<p>Ant design pro相关教程（比较少）：</p>
-<p><a href="https://zhuanlan.zhihu.com/p/36134136" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/36134136</a></p>
-<p><a href="https://blog.csdn.net/luo1055120207/article/details/78953381" target="_blank" rel="noopener">https://blog.csdn.net/luo1055120207/article/details/78953381</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/34665872" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/34665872</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/34641003" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/34641003</a></p>
+<p><strong>注意点：</strong></p>
+<p>1.必须一次性把数据都压入stackPop栈</p>
+<p>2.压入前必须保证stackPop栈为空</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Stack;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//创建两个栈</span></span><br><span class="line">    Stack&lt;Integer&gt; stackPush = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line">    Stack&lt;Integer&gt; stackPop = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> node)</span> </span>&#123;</span><br><span class="line">        stackPush.push(node);</span><br><span class="line">    &#125;</span><br><span class="line">   </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(stackPop.isEmpty() &amp;&amp; stackPush.isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"quene is empty"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (stackPop.isEmpty())&#123;</span><br><span class="line">            <span class="keyword">while</span>(!stackPush.isEmpty()) &#123;</span><br><span class="line">                stackPop.push(stackPush.pop());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> stackPop.pop();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -258,7 +217,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">React</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
         		</li>
       		
 		</ul>
@@ -314,7 +273,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/10/13/React-dva-ant-design/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/10/18/用两个栈实现队列/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -328,15 +287,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/10/18/排序算法总结-待续/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          排序算法总结(待续)
-        
-      </div>
-    </a>
   
+    <a href="/2018/10/18/排序算法总结-待续/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">排序算法总结(待续)</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
