@@ -26,7 +26,7 @@
 <meta property="og:image" content="http://yoursite.com/img/选择排序.gif">
 <meta property="og:image" content="http://yoursite.com/img/归并排序.png">
 <meta property="og:image" content="http://yoursite.com/img/归并排序.gif">
-<meta property="og:updated_time" content="2018-10-18T13:23:06.000Z">
+<meta property="og:updated_time" content="2018-10-18T13:29:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="排序算法总结(待续)">
 <meta name="twitter:description" content="0 算法概述 0.1 算法分类 十种常见排序算法：  非线性时间比较类排序：通过比较来决定元素间的相对次序，由于其时间复杂度不能突破O(nlogn)，因此称为非线性时间比较类排序。 线性时间非比较类排序：不通过比较来决定元素间的相对次序，它可以突破基于比较排序的时间下界，以线性时间运行，因此称为线性时间非比较类排序。">
@@ -207,7 +207,7 @@
 </ul>
 <p><strong>1.2 动图演示</strong></p>
 <p><img src="\img\冒泡排序.gif" alt="冒泡排序"></p>
-<p><strong>1.3 代码实现**</strong></p>
+<p><strong>1.3 代码实现</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">bubbleSort</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="comment">//n数组长度arr.len，数组下标从0开始</span></span><br><span class="line">    <span class="keyword">int</span> i, j;</span><br><span class="line">    <span class="comment">//每一次排序完毕最后一个位置上的数字肯定是当前最大,下一轮不需要参与</span></span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>; i &lt; n-<span class="number">1</span>; i++) &#123;<span class="comment">//第n次排序，i=n-1，通过添加外层i的循环来控制排序次数</span></span><br><span class="line">        <span class="keyword">for</span>(j=<span class="number">0</span>; j &lt; n-<span class="number">1</span>-i; j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(a[j] &gt; a[j+<span class="number">1</span>])&#123;<span class="comment">//前面的数字大于后面的数字就交换</span></span><br><span class="line">                <span class="keyword">int</span> temp;</span><br><span class="line">                temp = a[j];</span><br><span class="line">                a[j] = a[j+<span class="number">1</span>];</span><br><span class="line">                a[j+<span class="number">1</span>] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
 <p><strong>2 快速排序（Quick Sort）</strong></p>
@@ -249,7 +249,7 @@
 <p><img src="\img\希尔排序.png" alt="希尔排序"></p>
 <p><img src="\img\希尔排序.gif" alt="希尔排序"></p>
 <p>4.3 代码实现</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">shellSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(arr == <span class="keyword">null</span> || arr.length &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> arr;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//升序，三个for一个if！</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> gap = arr.length/<span class="number">2</span>; gap&gt;<span class="number">0</span>; gap/=<span class="number">2</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = gap; i&lt;arr.length; i++) &#123;</span><br><span class="line">            <span class="comment">//i:代表即将插入的元素的角标，作为每一组比较数据的最后一个元素角标</span></span><br><span class="line">            <span class="comment">//j:代表与i同一组的数组元素的角标          </span></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i-gap; j&gt;=<span class="number">0</span>; j-=gap) &#123;<span class="comment">//在此处-gap为了避免下面数组角标越界</span></span><br><span class="line">                <span class="keyword">if</span>(arr[j] &gt; arr[j+gap]) &#123; <span class="comment">//j+gap代表即将插入元素所在的角标</span></span><br><span class="line">                    <span class="comment">//符合条件，插入元素（交换位置）</span></span><br><span class="line">                    <span class="keyword">int</span> temp = arr[j];</span><br><span class="line">                    arr[j] = arr[j+gap];</span><br><span class="line">                    arr[j+gap] = temp;     </span><br><span class="line">                    <span class="comment">//此处感觉有点问题，有点像冒泡排序</span></span><br><span class="line">                    <span class="comment">//关注一下冒泡排序与插入排序的区别，主要是比较次数不同，是否跳出比较？</span></span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">break</span>;   <span class="comment">//区别一下冒泡排序和插入排序，比较的次数不一样，所以需要break；</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">shellSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(arr == <span class="keyword">null</span> || arr.length &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> arr;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//升序，三个for一个if！</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> gap = arr.length/<span class="number">2</span>; gap&gt;<span class="number">0</span>; gap/=<span class="number">2</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = gap; i&lt;arr.length; i++) &#123;</span><br><span class="line">            <span class="comment">//i:代表即将插入的元素的角标，作为每一组比较数据的最后一个元素角标</span></span><br><span class="line">            <span class="comment">//j:代表与i同一组的数组元素的角标          </span></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i-gap; j&gt;=<span class="number">0</span>; j-=gap) &#123;<span class="comment">//在此处-gap为了避免下面数组角标越界</span></span><br><span class="line">                <span class="keyword">if</span>(arr[j] &gt; arr[j+gap]) &#123; <span class="comment">//j+gap代表即将插入元素所在的角标</span></span><br><span class="line">                    <span class="comment">//符合条件，插入元素（交换位置）</span></span><br><span class="line">                    <span class="keyword">int</span> temp = arr[j];</span><br><span class="line">                    arr[j] = arr[j+gap];</span><br><span class="line">                    arr[j+gap] = temp;     </span><br><span class="line">                    <span class="comment">//此处感觉有点问题，有点像冒泡排序</span></span><br><span class="line">                    <span class="comment">//关注一下冒泡排序与插入排序的区别，主要是比较次数不同，是否跳出比较？</span></span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">break</span>;   <span class="comment">//区别一下冒泡排序和插入排序，比较的次数不一样，所以需要break；</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
 <p><strong>5.选择排序（Selection Sort）</strong></p>
 <p>选择排序(Selection-sort)是一种简单直观的排序算法。它的工作原理：首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置，然后，再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。以此类推，直到所有元素均排序完毕。 </p>
@@ -333,17 +333,6 @@
 	</div>
 
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
 
@@ -527,11 +516,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
+                <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
               </li>
             
             <div class="clearfix"></div>
