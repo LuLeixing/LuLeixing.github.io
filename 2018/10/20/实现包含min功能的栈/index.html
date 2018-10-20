@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>二分查找 | 住在海边的人的博客</title>
+  <title>实现包含min功能的栈 | 住在海边的人的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="二分查找 二分查找是一种查询效率非常高的查找算法，又称折半查找。 算法思想： 有序序列，每次都是以序列的中间位置的数来与待查找的关键字进行比较，每次缩小一半的查找范围，直到匹配成功。将表中间位置记录的关键字与查找关键字比较，如果两者相等，则查找成功；否则利用中间位置记录将表分成前、后两个子表，如果中间位置记录的关键字大于查找关键字，则进一步查找前一子表，否则进一步查找后一子表。重复以上过程，直到找">
-<meta name="keywords" content="Algorithm">
+  <meta name="description" content="实现包含min功能的栈 题目描述： 定义栈的数据结构，请在该类型中实现一个能够得到栈中所含最小元素的min函数（时间复杂度应为O(1)) 考察知识点：栈">
+<meta name="keywords" content="剑指offer">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二分查找">
-<meta property="og:url" content="http://yoursite.com/2018/10/20/二分查找/index.html">
+<meta property="og:title" content="实现包含min功能的栈">
+<meta property="og:url" content="http://yoursite.com/2018/10/20/实现包含min功能的栈/index.html">
 <meta property="og:site_name" content="住在海边的人的博客">
-<meta property="og:description" content="二分查找 二分查找是一种查询效率非常高的查找算法，又称折半查找。 算法思想： 有序序列，每次都是以序列的中间位置的数来与待查找的关键字进行比较，每次缩小一半的查找范围，直到匹配成功。将表中间位置记录的关键字与查找关键字比较，如果两者相等，则查找成功；否则利用中间位置记录将表分成前、后两个子表，如果中间位置记录的关键字大于查找关键字，则进一步查找前一子表，否则进一步查找后一子表。重复以上过程，直到找">
+<meta property="og:description" content="实现包含min功能的栈 题目描述： 定义栈的数据结构，请在该类型中实现一个能够得到栈中所含最小元素的min函数（时间复杂度应为O(1)) 考察知识点：栈">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/img/二分查找.png">
-<meta property="og:updated_time" content="2018-10-20T02:33:20.000Z">
+<meta property="og:updated_time" content="2018-10-20T03:24:30.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="二分查找">
-<meta name="twitter:description" content="二分查找 二分查找是一种查询效率非常高的查找算法，又称折半查找。 算法思想： 有序序列，每次都是以序列的中间位置的数来与待查找的关键字进行比较，每次缩小一半的查找范围，直到匹配成功。将表中间位置记录的关键字与查找关键字比较，如果两者相等，则查找成功；否则利用中间位置记录将表分成前、后两个子表，如果中间位置记录的关键字大于查找关键字，则进一步查找前一子表，否则进一步查找后一子表。重复以上过程，直到找">
-<meta name="twitter:image" content="http://yoursite.com/img/二分查找.png">
+<meta name="twitter:title" content="实现包含min功能的栈">
+<meta name="twitter:description" content="实现包含min功能的栈 题目描述： 定义栈的数据结构，请在该类型中实现一个能够得到栈中所含最小元素的min函数（时间复杂度应为O(1)) 考察知识点：栈">
   
     <link rel="alternative" href="/atom.xml" title="住在海边的人的博客" type="application/atom+xml">
   
@@ -155,42 +153,35 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-二分查找" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-实现包含min功能的栈" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      二分查找
+      实现包含min功能的栈
     </h1>
   
 
         
-        <a href="/2018/10/20/二分查找/" class="archive-article-date">
-  	<time datetime="2018-10-20T02:25:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-20</time>
+        <a href="/2018/10/20/实现包含min功能的栈/" class="archive-article-date">
+  	<time datetime="2018-10-20T03:23:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>二分查找</strong></p>
-<p>二分查找是一种查询效率非常高的查找算法，又称折半查找。</p>
-<p><strong>算法思想：</strong></p>
-<p>有序序列，每次都是以序列的中间位置的数来与待查找的关键字进行比较，每次缩小一半的查找范围，直到匹配成功。将表中间位置记录的关键字与查找关键字比较，如果两者相等，则查找成功；否则利用中间位置记录将表分成前、后两个子表，如果中间位置记录的关键字大于查找关键字，则进一步查找前一子表，否则进一步查找后一子表。重复以上过程，直到找到满足条件的记录，使查找成功，或直到子表不存在为止，此时查找不成功。<br><a id="more"></a></p>
-<p><strong>图示：</strong></p>
-<p><img src="\img\二分查找.png" alt="二分查找"></p>
-<p><strong>优缺点：</strong></p>
-<p>优点是比较次数少，查找速度快，平均性能好；</p>
-<p>缺点是要求待查表为有序表，且插入删除困难。</p>
-<p>因此，折半查找方法适用于不经常变动而查找频繁的有序列表。</p>
-<blockquote>
-<p><strong>使用条件：</strong></p>
-<p>查找序列是顺序结构，有序！注意是针对有序序列的查找！使用的前提是序列必须是有序的！</p>
-</blockquote>
-<p><strong>Java实现：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用递归实现</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">binarySearch1</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> low, <span class="keyword">int</span> key, <span class="keyword">int</span> high)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(key &lt; arr[low] || key &gt; arr[high] || low &gt; high) &#123;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> mid = low + (high-low) / <span class="number">2</span>; <span class="comment">//防止溢出</span></span><br><span class="line">    <span class="keyword">if</span>(key &lt; arr[mid]) &#123;</span><br><span class="line">        <span class="comment">//比关键字大，则关键字在左区域</span></span><br><span class="line">        <span class="keyword">return</span> binarySearch1(arr, low, key, mid-<span class="number">1</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(key &gt; arr[mid]) &#123;</span><br><span class="line">        <span class="comment">//比关键字小，则关键字在右区域</span></span><br><span class="line">        <span class="keyword">return</span> binarySearch1(arr, mid+<span class="number">1</span>, key, high);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> mid;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//使用非递归实现</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">binarySearch2</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> low, <span class="keyword">int</span> key, <span class="keyword">int</span> high)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(key &lt; arr[low] || key &gt; arr[high] || low &gt; high) &#123;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> mid = low + (high - low) / <span class="number">2</span>; <span class="comment">//防止溢出</span></span><br><span class="line">    <span class="keyword">while</span>(low &lt;= high) &#123;  <span class="comment">//注意是 &lt;=,相等时即只剩一个元素，还是需要进行判断！</span></span><br><span class="line">        <span class="keyword">if</span>(arr[mid] &lt; key) &#123;</span><br><span class="line">            <span class="comment">//关键词在右区域</span></span><br><span class="line">            low = mid + <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span>(arr[mid] &gt; key) &#123;</span><br><span class="line">            <span class="comment">//关键词在左区域</span></span><br><span class="line">            high = mid - <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;   <span class="comment">//最后仍然没有找到，则返回-1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p><strong>实现包含min功能的栈</strong></p>
+<p><strong>题目描述：</strong></p>
+<p>定义栈的数据结构，请在该类型中实现一个能够得到栈中所含最小元素的min函数（时间复杂度应为O(1))</p>
+<p>考察知识点：栈<br><a id="more"></a></p>
+<p><strong>解题思路：</strong></p>
+<p>方法一：</p>
+<p>通过两个栈来实现功能，stackData用于存储数据，stackMin用于存储当前的最小值，将新压入的数据与当前stackMin中的栈顶元素进行比较， 若小于当前栈顶元素，则压入stackMin栈；否则，重复压入stackMin的当前栈顶元素。</p>
+<p><strong>代码实现：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Stack;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> Stack&lt;Integer&gt; stackData = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line">    <span class="keyword">private</span> Stack&lt;Integer&gt; stackMin = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//压入</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> node)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//判断是否将新元素压入stackMin中</span></span><br><span class="line">        <span class="keyword">if</span>(stackMin.isEmpty())&#123; <span class="comment">//若stackMin栈为空，则直接压入</span></span><br><span class="line">            stackMin.push(node);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (node &lt; <span class="keyword">this</span>.min())&#123;</span><br><span class="line">            stackMin.push(node);  <span class="comment">//新的node若小于stackMin栈顶元素，则压入</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">int</span> newNode = stackMin.peek(); </span><br><span class="line">            stackMin.push(newNode);  <span class="comment">//若不小于，则重复压入stackMin中的栈顶元素</span></span><br><span class="line">        &#125;</span><br><span class="line">        stackData.push(node); <span class="comment">//压入stackData栈</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//弹出</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(stackData.isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"stack is empty!"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        stackMin.pop();</span><br><span class="line">        <span class="keyword">return</span> stackData.pop();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//返回栈顶元素</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">top</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(stackData.isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"stack is empty!"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> stackData.peek();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//获取当前最小值，即stackMin的栈顶元素</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">min</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(stackMin.isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"stack is empty!"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> stackMin.peek();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -225,7 +216,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Algorithm</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
         		</li>
       		
 		</ul>
@@ -281,7 +272,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/10/20/二分查找/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/10/20/实现包含min功能的栈/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -295,18 +286,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/10/20/实现包含min功能的栈/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          实现包含min功能的栈
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/10/18/用两个栈实现队列/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">用两个栈实现队列</div>
+    <a href="/2018/10/20/二分查找/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">二分查找</div>
       <i class="icon-circle-right"></i>
     </a>
   
