@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>用两个栈实现队列 | 住在海边的人的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题目描述：用两个栈来实现一个队列，完成队列的Push和Pop操作，队列中的元素为int类型 考察知识点：队列：先进先出栈：后进先出">
+  <meta name="description" content="题目描述：用两个栈来实现一个队列，完成队列的Push和Pop操作，队列中的元素为int类型考察知识点：队列：先进先出栈：后进先出">
 <meta name="keywords" content="剑指offer">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用两个栈实现队列">
 <meta property="og:url" content="http://yoursite.com/2018/10/18/用两个栈实现队列/index.html">
 <meta property="og:site_name" content="住在海边的人的博客">
-<meta property="og:description" content="题目描述：用两个栈来实现一个队列，完成队列的Push和Pop操作，队列中的元素为int类型 考察知识点：队列：先进先出栈：后进先出">
+<meta property="og:description" content="题目描述：用两个栈来实现一个队列，完成队列的Push和Pop操作，队列中的元素为int类型考察知识点：队列：先进先出栈：后进先出">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-20T03:40:47.170Z">
+<meta property="og:updated_time" content="2018-10-20T03:44:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用两个栈实现队列">
-<meta name="twitter:description" content="题目描述：用两个栈来实现一个队列，完成队列的Push和Pop操作，队列中的元素为int类型 考察知识点：队列：先进先出栈：后进先出">
+<meta name="twitter:description" content="题目描述：用两个栈来实现一个队列，完成队列的Push和Pop操作，队列中的元素为int类型考察知识点：队列：先进先出栈：后进先出">
   
     <link rel="alternative" href="/atom.xml" title="住在海边的人的博客" type="application/atom+xml">
   
@@ -173,12 +173,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>题目描述：</strong><br>用两个栈来实现一个队列，完成队列的Push和Pop操作，队列中的元素为int类型</p>
-<p><strong>考察知识点：</strong><br>队列：先进先出<br>栈：后进先出<br><a id="more"></a></p>
-<p><strong>注意点：</strong></p>
-<p>1.必须一次性把数据都压入stackPop栈</p>
-<p>2.压入前必须保证stackPop栈为空</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Stack;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//创建两个栈</span></span><br><span class="line">    Stack&lt;Integer&gt; stackPush = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line">    Stack&lt;Integer&gt; stackPop = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> node)</span> </span>&#123;</span><br><span class="line">        stackPush.push(node);</span><br><span class="line">    &#125;</span><br><span class="line">   </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(stackPop.isEmpty() &amp;&amp; stackPush.isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"quene is empty"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (stackPop.isEmpty())&#123;</span><br><span class="line">            <span class="keyword">while</span>(!stackPush.isEmpty()) &#123;</span><br><span class="line">                stackPop.push(stackPush.pop());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> stackPop.pop();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p><strong>题目描述：</strong><br>用两个栈来实现一个队列，完成队列的Push和Pop操作，队列中的元素为int类型<br><strong>考察知识点：</strong><br>队列：先进先出<br>栈：后进先出<br><a id="more"></a><br><strong>注意点：</strong><br>1.必须一次性把数据都压入stackPop栈<br>2.压入前必须保证stackPop栈为空<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Stack;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//创建两个栈</span></span><br><span class="line">    Stack&lt;Integer&gt; stackPush = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line">    Stack&lt;Integer&gt; stackPop = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> node)</span> </span>&#123;</span><br><span class="line">        stackPush.push(node);</span><br><span class="line">    &#125;</span><br><span class="line">   </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(stackPop.isEmpty() &amp;&amp; stackPush.isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"quene is empty"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (stackPop.isEmpty())&#123;</span><br><span class="line">            <span class="keyword">while</span>(!stackPush.isEmpty()) &#123;</span><br><span class="line">                stackPop.push(stackPush.pop());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> stackPop.pop();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
 
@@ -412,11 +407,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
+                <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
               </li>
              
               <li class="article-tag-list-item">
