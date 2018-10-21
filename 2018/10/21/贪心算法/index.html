@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 剑指offer | 住在海边的人的博客</title>
+  <title>贪心算法 | 住在海边的人的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="住在海边的人的博客">
-<meta property="og:url" content="http://yoursite.com/tags/剑指offer/index.html">
+  <meta name="description" content="基本概念:贪心算法，又称贪婪算法(Greedy Algorithm)，是指在对问题求解时，总是做出在当前看来是最好的选择。也就是说，不从整体最优解出发来考虑，它所做出的仅是在某种意义上的局部最优解。贪婪算法是一种分阶段的工作，在每一个阶段，可以认为所做决定是最好的，而不考虑将来的后果。这种“眼下能够拿到的就拿”的策略是这类算法名称的来源。贪心算法没有固定的算法框架，算法设计的关键是贪心策略的选择。">
+<meta name="keywords" content="Algorithm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="贪心算法">
+<meta property="og:url" content="http://yoursite.com/2018/10/21/贪心算法/index.html">
 <meta property="og:site_name" content="住在海边的人的博客">
+<meta property="og:description" content="基本概念:贪心算法，又称贪婪算法(Greedy Algorithm)，是指在对问题求解时，总是做出在当前看来是最好的选择。也就是说，不从整体最优解出发来考虑，它所做出的仅是在某种意义上的局部最优解。贪婪算法是一种分阶段的工作，在每一个阶段，可以认为所做决定是最好的，而不考虑将来的后果。这种“眼下能够拿到的就拿”的策略是这类算法名称的来源。贪心算法没有固定的算法框架，算法设计的关键是贪心策略的选择。">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-10-21T08:00:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="住在海边的人的博客">
+<meta name="twitter:title" content="贪心算法">
+<meta name="twitter:description" content="基本概念:贪心算法，又称贪婪算法(Greedy Algorithm)，是指在对问题求解时，总是做出在当前看来是最好的选择。也就是说，不从整体最优解出发来考虑，它所做出的仅是在某种意义上的局部最优解。贪婪算法是一种分阶段的工作，在每一个阶段，可以认为所做决定是最好的，而不考虑将来的后果。这种“眼下能够拿到的就拿”的策略是这类算法名称的来源。贪心算法没有固定的算法框架，算法设计的关键是贪心策略的选择。">
   
     <link rel="alternative" href="/atom.xml" title="住在海边的人的博客" type="application/atom+xml">
   
@@ -148,98 +153,178 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-贪心算法" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/10/20/实现包含min功能的栈/" class="archive-article-date">
-  	<time datetime="2018-10-20T03:23:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-20</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/10/20/实现包含min功能的栈/">实现包含min功能的栈</a>
+    <h1 class="article-title" itemprop="name">
+      贪心算法
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/10/21/贪心算法/" class="archive-article-date">
+  	<time datetime="2018-10-21T07:57:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>基本概念:</strong><br>贪心算法，又称贪婪算法(Greedy Algorithm)，是指在对问题求解时，总是做出在当前看来是最好的选择。也就是说，不从整体最优解出发来考虑，它所做出的仅是在某种意义上的局部最优解。<br>贪婪算法是一种分阶段的工作，在每一个阶段，可以认为所做决定是最好的，而不考虑将来的后果。这种“眼下能够拿到的就拿”的策略是这类算法名称的来源。<br>贪心算法没有固定的算法框架，算法设计的关键是贪心策略的选择。必须注意的是，贪心算法不是对所有问题都能得到整体最优解，选择的贪心策略必须具备无后效性，即某个状态以后的过程不会影响以前的状态，只与当前状态有关。所以对所采用的贪心策略一定要仔细分析其是否满足无后效性。<br><a id="more"></a><br><strong>基本思路：</strong><br>1.建立数学模型来描述问题<br>2.把求解的问题分成若干个子问题<br>3.对每一个子问题进行求解，得到子问题的局部最优解<br>4.把子问题的局部最优解合成原问题的一个解</p>
+<p><strong>适用场景：</strong><br>贪心策略适用的前提是：局部最优策略能导致产生全局最优解。也就是当算法终止的时候，局部最优等于全局最优。</p>
+<p><strong>算法框架：</strong><br>从问题的某一初始解出发；<br>while （能朝给定总目标前进一步）<br>{<br>利用可行的决策，求出可行解的一个解元素；<br>}<br>由所有解元素组合成问题的一个可行解；</p>
+<p><strong>贪心策略的选择：</strong><br>因为用贪心算法只能通过解局部最优解的策略来达到全局最优解，因此，一定要注意判断问题是否适合采用贪心算法策略，找到的解是否一定是问题的最优解。如果确定可以使用贪心算法，那一定要选择合适的贪心策略；</p>
+<p><strong>例子：</strong><br><strong>1.纸币找零问题</strong><br>假设有1元、2元、5元、10元、20元、50元、100元的纸币张数不限制，<br>现在要用来支付K元，至少要多少张纸币？</p>
+<p><strong>分析：</strong><br>我们很容易就想到使用贪心算法来解决<br>并且我们所根据的贪心策略是：<strong><em>每一步尽可能用面值大的纸币即可</em></strong>。<br>当然这是正确的。</p>
+<p><strong>代码如下：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Solution</span><span class="params">(<span class="keyword">int</span> money)</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">"需要找零："</span> + money)；</span><br><span class="line">    <span class="keyword">int</span>[] moneyLevel = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">10</span>, <span class="number">20</span>, <span class="number">50</span>, <span class="number">100</span>&#125;;</span><br><span class="line">    <span class="comment">//从最大的先开始用</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = moneyLevel.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        <span class="keyword">int</span> num = money / moneyLevel[i];</span><br><span class="line">        <span class="keyword">int</span> mod = money % moenyLevel[i]; <span class="comment">//取余</span></span><br><span class="line">        money = mod;</span><br><span class="line">        <span class="keyword">if</span> (num &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            System.out.println(<span class="string">"需要"</span> + num + <span class="string">"张"</span> + moneyLevel[i] + <span class="string">"块的"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>讨论：</strong><br>1.如果不限制纸币的金额，那这种情况还适合用贪心算法么。比如1元，2元，3元，4元，8元，15元的纸币，用来支付K元，至少多少张纸币？<br>经我们分析，这种情况是不适合用贪心算法的，因为我们上面提供的贪心策略不是最优解。比如，纸币1元，5元，6元，要支付10元的话，按照上面的算法，至少需要1张6元的，4张1元的，而实际上最优的应该是2张5元的。<br>2.如果限制纸币的张数，那这种情况还适合用贪心算法么。比如1元10张，2元20张，5元1张，用来支付K元，至少多少张纸币？<br>同样，仔细想一下，就知道这种情况也是不适合用贪心算法的。比如1元10张，20元5张，50元1张，那用来支付60元，按照上面的算法，至少需要1张50元，10张1元，而实际上使用3张20元的即可；<br>3.所以贪心算法是一种在某种范围内，局部最优的算法。</p>
+<blockquote>
+<p>（例子待补充<br>此处感谢：<a href="https://www.cnblogs.com/xiaozhang2014/p/7783795.html" target="_blank" rel="noopener">https://www.cnblogs.com/xiaozhang2014/p/7783795.html</a></p>
+</blockquote>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Algorithm</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/10/21/贪心算法/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/10/18/用两个栈实现队列/" class="archive-article-date">
-  	<time datetime="2018-10-18T13:43:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-18</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/10/20/实现包含min功能的栈/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">实现包含min功能的栈</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/10/18/用两个栈实现队列/">用两个栈实现队列</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -262,9 +347,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
