@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>二分查找 | 住在海边的人的博客</title>
+  <title>堆排序 | 住在海边的人的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="二分查找二分查找是一种查询效率非常高的查找算法，又称折半查找。算法思想：有序序列，每次都是以序列的中间位置的数来与待查找的关键字进行比较，每次缩小一半的查找范围，直到匹配成功。将表中间位置记录的关键字与查找关键字比较，如果两者相等，则查找成功；否则利用中间位置记录将表分成前、后两个子表，如果中间位置记录的关键字大于查找关键字，则进一步查找前一子表，否则进一步查找后一子表。重复以上过程，直到找到满足">
+  <meta name="description" content="基本思路：a.将无需序列构建成一个堆，根据升序降序需求选择大顶堆或小顶堆;b.将堆顶元素与末尾元素交换，将最大元素”沉”到数组末端;c.重新调整结构，使其满足堆定义，然后继续交换堆顶元素与当前末尾元素，反复执行调整+交换步骤，直到整个序列有序。">
 <meta name="keywords" content="Algorithm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二分查找">
-<meta property="og:url" content="http://yoursite.com/2018/10/20/二分查找/index.html">
+<meta property="og:title" content="堆排序">
+<meta property="og:url" content="http://yoursite.com/2018/10/24/堆排序/index.html">
 <meta property="og:site_name" content="住在海边的人的博客">
-<meta property="og:description" content="二分查找二分查找是一种查询效率非常高的查找算法，又称折半查找。算法思想：有序序列，每次都是以序列的中间位置的数来与待查找的关键字进行比较，每次缩小一半的查找范围，直到匹配成功。将表中间位置记录的关键字与查找关键字比较，如果两者相等，则查找成功；否则利用中间位置记录将表分成前、后两个子表，如果中间位置记录的关键字大于查找关键字，则进一步查找前一子表，否则进一步查找后一子表。重复以上过程，直到找到满足">
+<meta property="og:description" content="基本思路：a.将无需序列构建成一个堆，根据升序降序需求选择大顶堆或小顶堆;b.将堆顶元素与末尾元素交换，将最大元素”沉”到数组末端;c.重新调整结构，使其满足堆定义，然后继续交换堆顶元素与当前末尾元素，反复执行调整+交换步骤，直到整个序列有序。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/img/二分查找.png">
-<meta property="og:updated_time" content="2018-10-20T03:45:02.000Z">
+<meta property="og:updated_time" content="2018-10-24T12:03:13.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="二分查找">
-<meta name="twitter:description" content="二分查找二分查找是一种查询效率非常高的查找算法，又称折半查找。算法思想：有序序列，每次都是以序列的中间位置的数来与待查找的关键字进行比较，每次缩小一半的查找范围，直到匹配成功。将表中间位置记录的关键字与查找关键字比较，如果两者相等，则查找成功；否则利用中间位置记录将表分成前、后两个子表，如果中间位置记录的关键字大于查找关键字，则进一步查找前一子表，否则进一步查找后一子表。重复以上过程，直到找到满足">
-<meta name="twitter:image" content="http://yoursite.com/img/二分查找.png">
+<meta name="twitter:title" content="堆排序">
+<meta name="twitter:description" content="基本思路：a.将无需序列构建成一个堆，根据升序降序需求选择大顶堆或小顶堆;b.将堆顶元素与末尾元素交换，将最大元素”沉”到数组末端;c.重新调整结构，使其满足堆定义，然后继续交换堆顶元素与当前末尾元素，反复执行调整+交换步骤，直到整个序列有序。">
   
     <link rel="alternative" href="/atom.xml" title="住在海边的人的博客" type="application/atom+xml">
   
@@ -155,39 +153,31 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-二分查找" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-堆排序" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      二分查找
+      堆排序
     </h1>
   
 
         
-        <a href="/2018/10/20/二分查找/" class="archive-article-date">
-  	<time datetime="2018-10-20T02:25:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-20</time>
+        <a href="/2018/10/24/堆排序/" class="archive-article-date">
+  	<time datetime="2018-10-24T12:01:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-24</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>二分查找</strong><br>二分查找是一种查询效率非常高的查找算法，又称折半查找。<br><strong>算法思想：</strong><br>有序序列，每次都是以序列的中间位置的数来与待查找的关键字进行比较，每次缩小一半的查找范围，直到匹配成功。将表中间位置记录的关键字与查找关键字比较，如果两者相等，则查找成功；否则利用中间位置记录将表分成前、后两个子表，如果中间位置记录的关键字大于查找关键字，则进一步查找前一子表，否则进一步查找后一子表。重复以上过程，直到找到满足条件的记录，使查找成功，或直到子表不存在为止，此时查找不成功。<br><a id="more"></a></p>
-<p><strong>图示：</strong></p>
-<p><img src="\img\二分查找.png" alt="二分查找"></p>
-<p><strong>优缺点：</strong></p>
-<p>优点是比较次数少，查找速度快，平均性能好；</p>
-<p>缺点是要求待查表为有序表，且插入删除困难。</p>
-<p>因此，折半查找方法适用于不经常变动而查找频繁的有序列表。</p>
+        <p>基本思路：<br>a.将无需序列构建成一个堆，根据升序降序需求选择大顶堆或小顶堆;<br>b.将堆顶元素与末尾元素交换，将最大元素”沉”到数组末端;<br>c.重新调整结构，使其满足堆定义，然后继续交换堆顶元素与当前末尾元素，反复执行调整+交换步骤，直到整个序列有序。<br><a id="more"></a></p>
 <blockquote>
-<p><strong>使用条件：</strong></p>
-<p>查找序列是顺序结构，有序！注意是针对有序序列的查找！使用的前提是序列必须是有序的！</p>
+<p>对结构调整的过程理解的不是很好，没有完全理解</p>
 </blockquote>
-<p><strong>Java实现：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用递归实现</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">binarySearch1</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> low, <span class="keyword">int</span> key, <span class="keyword">int</span> high)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(key &lt; arr[low] || key &gt; arr[high] || low &gt; high) &#123;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> mid = low + (high-low) / <span class="number">2</span>; <span class="comment">//防止溢出</span></span><br><span class="line">    <span class="keyword">if</span>(key &lt; arr[mid]) &#123;</span><br><span class="line">        <span class="comment">//比关键字大，则关键字在左区域</span></span><br><span class="line">        <span class="keyword">return</span> binarySearch1(arr, low, key, mid-<span class="number">1</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(key &gt; arr[mid]) &#123;</span><br><span class="line">        <span class="comment">//比关键字小，则关键字在右区域</span></span><br><span class="line">        <span class="keyword">return</span> binarySearch1(arr, mid+<span class="number">1</span>, key, high);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> mid;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//使用非递归实现</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">binarySearch2</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> low, <span class="keyword">int</span> key, <span class="keyword">int</span> high)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(key &lt; arr[low] || key &gt; arr[high] || low &gt; high) &#123;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> mid = low + (high - low) / <span class="number">2</span>; <span class="comment">//防止溢出</span></span><br><span class="line">    <span class="keyword">while</span>(low &lt;= high) &#123;  <span class="comment">//注意是 &lt;=,相等时即只剩一个元素，还是需要进行判断！</span></span><br><span class="line">        <span class="keyword">if</span>(arr[mid] &lt; key) &#123;</span><br><span class="line">            <span class="comment">//关键词在右区域</span></span><br><span class="line">            low = mid + <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span>(arr[mid] &gt; key) &#123;</span><br><span class="line">            <span class="comment">//关键词在左区域</span></span><br><span class="line">            high = mid - <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;   <span class="comment">//最后仍然没有找到，则返回-1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HeapSort</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> [] arr = &#123;<span class="number">9</span>, <span class="number">8</span>, <span class="number">7</span>, <span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>&#125;;</span><br><span class="line">        sort(arr);</span><br><span class="line">        System.out.println(Arrays.toString(arr));</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span> []arr)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//1.构建大顶堆</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=arr.length/<span class="number">2</span> - <span class="number">1</span>; i&gt;=<span class="number">0</span>; i--) &#123;</span><br><span class="line">            <span class="comment">//从第一个非叶子结点从下至上，从右至左调整结构</span></span><br><span class="line">            adjustHeap(arr, i, arr.length);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//2.调整堆结构+交换堆元素与末尾元素</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=arr.length-<span class="number">1</span>; j&gt;<span class="number">0</span>; j--) &#123;</span><br><span class="line">            swap(arr, <span class="number">0</span>, j); <span class="comment">//将堆顶元素与末尾元素进行交换</span></span><br><span class="line">            adjustHeap(arr, <span class="number">0</span> ,j); <span class="comment">//重新对堆进行调整</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//调整大顶堆（仅是调整过程，建立在大顶堆已构建的基础上）</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">adjustHeap</span><span class="params">(<span class="keyword">int</span> []arr, <span class="keyword">int</span> i, <span class="keyword">int</span> length)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> temp = arr[i]; <span class="comment">//先取出当前元素i</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k=i*<span class="number">2</span>+<span class="number">1</span>; k&lt;length; k=k*<span class="number">2</span>+<span class="number">1</span>) &#123;   <span class="comment">//从i结点的左子结点开始，也就是2i+1处开始</span></span><br><span class="line">            <span class="keyword">if</span>(k+<span class="number">1</span>&lt;length &amp;&amp; arr[k]&lt;arr[k+<span class="number">1</span>])&#123;</span><br><span class="line">                k++; <span class="comment">//如果左子结点小于右子结点，k指向右子结点</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(arr[k] &gt; temp) &#123; <span class="comment">//如果子结点大于父节点，将子结点赋值给父结点（不用进行交换）</span></span><br><span class="line">                arr[i] = arr[k];</span><br><span class="line">                i = k;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        arr[i] = temp; <span class="comment">//将temp值放到最终的位置</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//交换元素</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> []arr, <span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> temp = arr[a];</span><br><span class="line">        arr[a] = arr[b];</span><br><span class="line">        arr[b] = temp;</span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -278,7 +268,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/10/20/二分查找/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/10/24/堆排序/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -292,18 +282,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/10/20/实现包含min功能的栈/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          实现包含min功能的栈
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/10/18/用两个栈实现队列/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">用两个栈实现队列</div>
+    <a href="/2018/10/24/树及二叉树基本概念总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">树及二叉树基本概念总结</div>
       <i class="icon-circle-right"></i>
     </a>
   

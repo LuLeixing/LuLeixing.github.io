@@ -6,22 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>二分查找 | 住在海边的人的博客</title>
+  <title>树及二叉树基本概念总结 | 住在海边的人的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="二分查找二分查找是一种查询效率非常高的查找算法，又称折半查找。算法思想：有序序列，每次都是以序列的中间位置的数来与待查找的关键字进行比较，每次缩小一半的查找范围，直到匹配成功。将表中间位置记录的关键字与查找关键字比较，如果两者相等，则查找成功；否则利用中间位置记录将表分成前、后两个子表，如果中间位置记录的关键字大于查找关键字，则进一步查找前一子表，否则进一步查找后一子表。重复以上过程，直到找到满足">
-<meta name="keywords" content="Algorithm">
+  <meta name="description" content="树是一种数据结构，它是由n（n&amp;gt;=1）个有限结点组成一个具有层次关系的集合。">
+<meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二分查找">
-<meta property="og:url" content="http://yoursite.com/2018/10/20/二分查找/index.html">
+<meta property="og:title" content="树及二叉树基本概念总结">
+<meta property="og:url" content="http://yoursite.com/2018/10/24/树及二叉树基本概念总结/index.html">
 <meta property="og:site_name" content="住在海边的人的博客">
-<meta property="og:description" content="二分查找二分查找是一种查询效率非常高的查找算法，又称折半查找。算法思想：有序序列，每次都是以序列的中间位置的数来与待查找的关键字进行比较，每次缩小一半的查找范围，直到匹配成功。将表中间位置记录的关键字与查找关键字比较，如果两者相等，则查找成功；否则利用中间位置记录将表分成前、后两个子表，如果中间位置记录的关键字大于查找关键字，则进一步查找前一子表，否则进一步查找后一子表。重复以上过程，直到找到满足">
+<meta property="og:description" content="树是一种数据结构，它是由n（n&amp;gt;=1）个有限结点组成一个具有层次关系的集合。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/img/二分查找.png">
-<meta property="og:updated_time" content="2018-10-20T03:45:02.000Z">
+<meta property="og:image" content="http://yoursite.com/img/二叉树的五种形态.png">
+<meta property="og:image" content="http://yoursite.com/img/满二叉树.png">
+<meta property="og:image" content="http://yoursite.com/img/完全二叉树.png">
+<meta property="og:image" content="http://yoursite.com/img/二叉查找树.png">
+<meta property="og:updated_time" content="2018-10-24T12:03:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="二分查找">
-<meta name="twitter:description" content="二分查找二分查找是一种查询效率非常高的查找算法，又称折半查找。算法思想：有序序列，每次都是以序列的中间位置的数来与待查找的关键字进行比较，每次缩小一半的查找范围，直到匹配成功。将表中间位置记录的关键字与查找关键字比较，如果两者相等，则查找成功；否则利用中间位置记录将表分成前、后两个子表，如果中间位置记录的关键字大于查找关键字，则进一步查找前一子表，否则进一步查找后一子表。重复以上过程，直到找到满足">
-<meta name="twitter:image" content="http://yoursite.com/img/二分查找.png">
+<meta name="twitter:title" content="树及二叉树基本概念总结">
+<meta name="twitter:description" content="树是一种数据结构，它是由n（n&amp;gt;=1）个有限结点组成一个具有层次关系的集合。">
+<meta name="twitter:image" content="http://yoursite.com/img/二叉树的五种形态.png">
   
     <link rel="alternative" href="/atom.xml" title="住在海边的人的博客" type="application/atom+xml">
   
@@ -155,39 +158,63 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-二分查找" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-树及二叉树基本概念总结" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      二分查找
+      树及二叉树基本概念总结
     </h1>
   
 
         
-        <a href="/2018/10/20/二分查找/" class="archive-article-date">
-  	<time datetime="2018-10-20T02:25:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-20</time>
+        <a href="/2018/10/24/树及二叉树基本概念总结/" class="archive-article-date">
+  	<time datetime="2018-10-24T11:54:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-24</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>二分查找</strong><br>二分查找是一种查询效率非常高的查找算法，又称折半查找。<br><strong>算法思想：</strong><br>有序序列，每次都是以序列的中间位置的数来与待查找的关键字进行比较，每次缩小一半的查找范围，直到匹配成功。将表中间位置记录的关键字与查找关键字比较，如果两者相等，则查找成功；否则利用中间位置记录将表分成前、后两个子表，如果中间位置记录的关键字大于查找关键字，则进一步查找前一子表，否则进一步查找后一子表。重复以上过程，直到找到满足条件的记录，使查找成功，或直到子表不存在为止，此时查找不成功。<br><a id="more"></a></p>
-<p><strong>图示：</strong></p>
-<p><img src="\img\二分查找.png" alt="二分查找"></p>
-<p><strong>优缺点：</strong></p>
-<p>优点是比较次数少，查找速度快，平均性能好；</p>
-<p>缺点是要求待查表为有序表，且插入删除困难。</p>
-<p>因此，折半查找方法适用于不经常变动而查找频繁的有序列表。</p>
-<blockquote>
-<p><strong>使用条件：</strong></p>
-<p>查找序列是顺序结构，有序！注意是针对有序序列的查找！使用的前提是序列必须是有序的！</p>
+        <p>树是一种数据结构，它是由n（n&gt;=1）个有限结点组成一个具有层次关系的集合。<br><a id="more"></a></p>
+<p><strong>树具有的特点有：</strong><br>1.每个结点有零个或多个子节点<br>2.没有父节点的结点称为根节点<br>3.每一个非根结点有且只有一个父节点<br>4.除了根结点外，每个子节点科研分为多个不相交的子树</p>
+<p><strong>树的基本术语有：</strong><br>若一个结点有子树，那么该结点称为子树根的“双亲”，子树的根称为该结点的“孩子”。有相同双亲的结点互为“兄弟”。一个结点的所有子树上的任何结点都是该结点的后裔。从根结点到某个结点的路径上的所有结点都是该结点的祖先。</p>
+<p><strong>结点的度：</strong>结点拥有的子树的数目<br><strong>叶子结点：</strong>度为0的结点<br><strong>分支结点：</strong>度不为0的结点<br><strong>树的度：</strong>树中结点的最大的度<br><strong>层次：</strong>根结点的层次为1，其余结点的层次等于该结点的双亲结点的层次加1<br><strong>树的高度：</strong>树中结点的最大层次<br><strong>森林：</strong>0个或多个不相交的树组成。对森林加上一个根，森林即成为树；删去根，树即成为森林。</p>
+<hr>
+<p><strong>二叉树</strong><br><strong>二叉树的定义：</strong>二叉树是每个结点最多有两个子树的树结构。<br>它有五种基本形态：二叉树可以是空集；根可以有空的左子树或右子树；或者左、右子树皆为空。<br><img src="\img\二叉树的五种形态.png" alt="二叉树的五种形态"><br><strong>二叉树的优势：</strong>在实际使用时会根据链表和有序数组等数据结构的不同优势进行选择。有序数组的优势在于二分查找，链表的优势在于数据项的插入和数据项的删除。但是在有序数组中插入数据就会很慢，同样在链表中查找数据项效率就很低。综合以上情况，二叉树可以利用链表和有序数组的优势，同时可以合并有序数组和链表的优势，二叉树也是一种常用的数据结构。<br><strong>二叉树的性质（重点！）：</strong></p>
+<ol>
+<li>二叉树第i层上的结点数目最多为2^(i-1) (i&gt;=1)</li>
+<li>深度为k的二叉树至多有2^k - 1个结点（k&gt;=1)</li>
+<li>包含n个结点的二叉树的高度至少为(log2n)+1</li>
+<li>在任意一棵二叉树中，若终端结点的个数为n0，度为2的结点数为n2，则n0=n2+1<blockquote>
+<p><strong>性质4的证明</strong></p>
+<p>性质4：在任意一棵二叉树中，若终端结点的个数为n0，度为2的结点数为n2，则n0=n2+1</p>
+<p>证明：因为二叉树中所有结点的度数均不大于2，不妨设n0表示度为0的结点个数，n1表示度为1的结点个数，n2表示度为2的结点个数。三类结点加起来为总结点个数，于是便可得到：n=n0+n1+n2 (1)</p>
+<p>由度之间的关系可得第二个等式：n=n0<strong>0+n1</strong>1+n2*2+1即n=n1+2n2+1 (2)</p>
+<p>将（1）（2）组合在一起可得到n0=n2+1</p>
+<p>备注：一般度的总数等于节点之间连线的总数，一般等于n-1 = n0<strong>0+n1</strong>1+n2*2</p>
 </blockquote>
-<p><strong>Java实现：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用递归实现</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">binarySearch1</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> low, <span class="keyword">int</span> key, <span class="keyword">int</span> high)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(key &lt; arr[low] || key &gt; arr[high] || low &gt; high) &#123;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> mid = low + (high-low) / <span class="number">2</span>; <span class="comment">//防止溢出</span></span><br><span class="line">    <span class="keyword">if</span>(key &lt; arr[mid]) &#123;</span><br><span class="line">        <span class="comment">//比关键字大，则关键字在左区域</span></span><br><span class="line">        <span class="keyword">return</span> binarySearch1(arr, low, key, mid-<span class="number">1</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(key &gt; arr[mid]) &#123;</span><br><span class="line">        <span class="comment">//比关键字小，则关键字在右区域</span></span><br><span class="line">        <span class="keyword">return</span> binarySearch1(arr, mid+<span class="number">1</span>, key, high);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> mid;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//使用非递归实现</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">binarySearch2</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> low, <span class="keyword">int</span> key, <span class="keyword">int</span> high)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(key &lt; arr[low] || key &gt; arr[high] || low &gt; high) &#123;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> mid = low + (high - low) / <span class="number">2</span>; <span class="comment">//防止溢出</span></span><br><span class="line">    <span class="keyword">while</span>(low &lt;= high) &#123;  <span class="comment">//注意是 &lt;=,相等时即只剩一个元素，还是需要进行判断！</span></span><br><span class="line">        <span class="keyword">if</span>(arr[mid] &lt; key) &#123;</span><br><span class="line">            <span class="comment">//关键词在右区域</span></span><br><span class="line">            low = mid + <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span>(arr[mid] &gt; key) &#123;</span><br><span class="line">            <span class="comment">//关键词在左区域</span></span><br><span class="line">            high = mid - <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;   <span class="comment">//最后仍然没有找到，则返回-1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<p><strong>满二叉树</strong><br>定义：高度为h，并且由2h-1个结点组成的二叉树，称为满二叉树。<br><img src="\img\满二叉树.png" alt="满二叉树"></p>
+<hr>
+<p><strong>完全二叉树</strong><br><strong>定义：</strong>一棵二叉树中，只有最下面两层结点的度可以小于2，并且最下层的叶结点集中在靠左的若干位置上，这样的二叉树称为完全二叉树。<br><strong>特点：</strong>叶子结点只能出现在最下层和次下层，且最下层的叶子结点集中在树的左部。显然，一棵满二叉树必定是一棵完全二叉树，而完全二叉树未必是满二叉树。<br><img src="\img\完全二叉树.png" alt="完全二叉树"><br><strong>面试题：如果一个完全二叉树的结点总数为768个，求叶子结点的个数。</strong><br>由二叉树的性质知：n0=n2+1，将之带入768=n0+n1+n2中得：768=n1+2n2+1，因为完全二叉树度为1的结点个数要么为0，要么为1，那么就把n1=0或者1都代入公式中，很容易发现n1=1才符合条件。所以算出来n2=383，所以叶子结点个数n0=n2+1=384。</p>
+<blockquote>
+<p><strong>总结规律：</strong></p>
+<p>如果一棵完全二叉树的结点总数为n，那么叶子结点等于n/2（当n为偶数时）或者(n+1)/2（当n为奇数时）</p>
+</blockquote>
+<hr>
+<p><strong>二叉查找树</strong><br><strong>定义：</strong>二叉查找树又被称为二叉搜索树。设x为二叉查找树中的一个结点，x结点包含关键字key，结点x的key值计为key[x]。如果y是x的左子树中的一个结点，则key[y]&lt;key[x]；如果y是x的右子树的一个结点，则key[y]&gt;key[x]<br> <img src="\img\二叉查找树.png" alt="二叉查找树"><br><strong>在二叉查找树中：</strong><br>（1）若任意结点的左子树不空，则左子树上所有结点的值均小于它的根结点的值。<br>（2）任意结点的右子树不空，则右子树上所有结点的值均大于它的根结点的值。<br>（3）任意结点的左、右子树也分别为二叉查找树。<br>（4）没有键值相等的结点。</p>
+<blockquote>
+<p>此处参考了博客：</p>
+<p>二叉树基本知识总结：</p>
+<p><a href="https://blog.csdn.net/xiaoquantouer/article/details/65631708?utm_source=blogxgwz1" target="_blank" rel="noopener">https://blog.csdn.net/xiaoquantouer/article/details/65631708?utm_source=blogxgwz1</a></p>
+<p>轻松搞定面试中的二叉树题目：</p>
+<p><a href="http://blog.csdn.net/walkinginthewind/article/details/7518888" target="_blank" rel="noopener">http://blog.csdn.net/walkinginthewind/article/details/7518888</a></p>
+</blockquote>
 
       
 
@@ -222,7 +249,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Algorithm</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
         		</li>
       		
 		</ul>
@@ -278,7 +305,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/10/20/二分查找/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/10/24/树及二叉树基本概念总结/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -292,18 +319,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/10/20/实现包含min功能的栈/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/10/24/堆排序/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          实现包含min功能的栈
+          堆排序
         
       </div>
     </a>
   
   
-    <a href="/2018/10/18/用两个栈实现队列/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">用两个栈实现队列</div>
+    <a href="/2018/10/21/贪心算法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">贪心算法</div>
       <i class="icon-circle-right"></i>
     </a>
   
